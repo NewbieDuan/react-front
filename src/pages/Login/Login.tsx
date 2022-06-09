@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Http from "../../api/http";
 
 const Login: FC = () => {
-    const [loginForm, setLoginForm] = useState({ account: '', password: '' })
+    const [loginForm, setLoginForm] = useState({ username: '', password: '' })
     const navagate = useNavigate()
 
     const login = () => {
@@ -22,7 +22,7 @@ const Login: FC = () => {
                     className="login-input"
                     placeholder="default size"
                     prefix={<UserOutlined />}
-                    onChange={(e) => setLoginForm({ ...loginForm, account: e.target.value })}
+                    onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
                 />
                 <Input.Password
                     className="login-input"
